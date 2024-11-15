@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := buildall
+.DEFAULT_GOAL := publishall
 
 IMAGE-PREFIX ?= ssingh3339
 
