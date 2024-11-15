@@ -6,7 +6,6 @@ export DOCKER_CLI_EXPERIMENTAL=enabled
 
 .PHONY: build-rsocket-ping
 build-rsocket-ping:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=docker,push=false" \
@@ -15,7 +14,6 @@ build-rsocket-ping:
 
 .PHONY: publish-rsocket-ping
 publish-rsocket-ping:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=image,push=true" \
@@ -24,7 +22,6 @@ publish-rsocket-ping:
 
 .PHONY: build-udp-server
 build-udp-server:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=docker,push=false" \
@@ -33,7 +30,6 @@ build-udp-server:
 
 .PHONY: publish-udp-server
 publish-udp-server:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=image,push=true" \
@@ -42,7 +38,6 @@ publish-udp-server:
 
 .PHONY: build-echo-graphql
 build-echo-graphql:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=docker,push=false" \
@@ -51,7 +46,6 @@ build-echo-graphql:
 
 .PHONY: publish-echo-graphql
 publish-echo-graphql:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=image,push=true" \
@@ -60,7 +54,6 @@ publish-echo-graphql:
 
 .PHONY: build-graphql-stream
 build-graphql-stream:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=docker,push=false" \
@@ -69,7 +62,6 @@ build-graphql-stream:
 
 .PHONY: publish-graphql-stream
 publish-graphql-stream:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=image,push=true" \
@@ -78,7 +70,6 @@ publish-graphql-stream:
 
 .PHONY: build-http-ping
 build-http-ping:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=docker,push=false" \
@@ -87,7 +78,6 @@ build-http-ping:
 
 .PHONY: publish-http-ping
 publish-http-ping:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=image,push=true" \
@@ -96,7 +86,6 @@ publish-http-ping:
 
 .PHONY: build-grpc-ping
 build-grpc-ping:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=docker,push=false" \
@@ -105,7 +94,6 @@ build-grpc-ping:
 
 .PHONY: publish-grpc-ping
 publish-grpc-ping:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=image,push=true" \
@@ -114,7 +102,6 @@ publish-grpc-ping:
 
 .PHONY: build-ws-echo
 build-ws-echo:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=docker,push=false" \
@@ -123,7 +110,6 @@ build-ws-echo:
 
 .PHONY: publish-ws-echo
 publish-ws-echo:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=image,push=true" \
@@ -132,7 +118,6 @@ publish-ws-echo:
 
 .PHONY: build-graphql-rest
 build-graphql-rest:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=docker,push=false" \
@@ -141,7 +126,6 @@ build-graphql-rest:
 
 .PHONY: publish-graphql-rest
 publish-graphql-rest:
-	@docker buildx create --use --name=crossplat --node=crossplat && \
 	docker buildx build \
 		--platform linux/amd64,linux/arm64 \
 		--output "type=image,push=true" \
