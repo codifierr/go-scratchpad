@@ -15,6 +15,7 @@ WORKDIR /app/
 
 COPY --from=builder /app/tls.cert /app/tls.cert
 COPY --from=builder /app/tls.key /app/tls.key
+RUN chmod 600 /app/tls.cert /app/tls.key
 
 COPY --from=builder /app/grpc-ping  /app/grpc-ping
 ENTRYPOINT ["/app/grpc-ping"]
