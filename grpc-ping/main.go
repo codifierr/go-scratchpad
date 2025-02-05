@@ -55,14 +55,13 @@ func main() {
 		log.Fatal().Err(err).Msg("Failed to listen")
 	}
 
-	c, err := credentials.NewServerTLSFromFile(crtFilePath, keyFilePath)
-	if err != nil {
-		log.Fatal().Err(err).Msg("Credentials from tls file")
-	}
-
 	var s *grpc.Server
 
 	if tls != "" && tls == "true" {
+		c, err := credentials.NewServerTLSFromFile(crtFilePath, keyFilePath)
+		if err != nil {
+			log.Fatal().Err(err).Msg("Credentials from tls file")
+		}
 		s = grpc.NewServer(grpc.Creds(c))
 		log.Info().Str("tls", tls).Msg("TLS Enabled")
 	} else {
