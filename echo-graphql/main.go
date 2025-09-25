@@ -11,11 +11,13 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
+// User represents a user object
 type User struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
 }
 
+// sample data
 var users []User = []User{
 	{ID: "1", Name: "John"},
 	{ID: "2", Name: "Jane"},
