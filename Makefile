@@ -132,8 +132,24 @@ publish-graphql-rest:
 		--tag $(IMAGE-PREFIX)/graphql-rest:latest \
 		graphql-rest/.
 
+.PHONY: build-es-bulk-proxy
+build-es-bulk-proxy:
+	docker buildx build \
+		--platform linux/amd64,linux/arm64 \
+		--output "type=docker,push=false" \
+		--tag $(IMAGE-PREFIX)/es-bulk-proxy:latest \
+		es-bulk-proxy/.
+
+.PHONY: publish-es-bulk-proxy
+publish-es-bulk-proxy:
+	docker buildx build \
+		--platform linux/amd64,linux/arm64 \
+		--output "type=image,push=true" \
+		--tag $(IMAGE-PREFIX)/es-bulk-proxy:latest \
+		es-bulk-proxy/.
+
 .PHONY: buildall
-buildall: build-rsocket-ping build-udp-server build-echo-graphql build-graphql-stream build-http-ping build-grpc-ping build-ws-echo build-graphql-rest
+buildall: build-rsocket-ping build-udp-server build-echo-graphql build-graphql-stream build-http-ping build-grpc-ping build-ws-echo build-graphql-rest build-es-bulk-proxy
 
 .PHONY: publishall
-publishall: publish-rsocket-ping publish-udp-server publish-echo-graphql publish-graphql-stream publish-http-ping publish-grpc-ping publish-ws-echo publish-graphql-rest
+publishall: publish-rsocket-ping publish-udp-server publish-echo-graphql publish-graphql-stream publish-http-ping publish-grpc-ping publish-ws-echo publish-graphql-rest publish-es-bulk-proxy

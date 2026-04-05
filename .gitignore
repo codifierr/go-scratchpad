@@ -30,3 +30,4 @@ grpc/.vscode/settings.json
 wasm/.vscode/settings.json
 rsocket/.testCoverage.txt
 
+es-bulk-proxy/es-bulk-proxy
