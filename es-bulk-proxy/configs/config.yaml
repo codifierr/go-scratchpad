@@ -5,7 +5,7 @@ server:
   port: "8080"
 
 elasticsearch:
-  url: "http://localhost:9200"
+  url: "http://es:9200"
 
 buffer:
   # Time interval to flush buffer
